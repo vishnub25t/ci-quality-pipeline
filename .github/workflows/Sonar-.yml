@@ -1,4 +1,4 @@
-name: Sonarqube code analys
+name: scan
 
 on:
   workflow_dispatch:
