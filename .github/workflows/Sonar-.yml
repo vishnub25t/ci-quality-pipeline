@@ -1,4 +1,4 @@
-name: scan
+name: sonargube 
 
 on:
   workflow_dispatch:
