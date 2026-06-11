@@ -15,8 +15,8 @@ jobs:
 
       - name: install unzip 
         run: |
-        #sudo apt update -y
-        #sudo apt intall unzip -y
+          sudo apt update -y
+          sudo apt intall unzip -y
 
       - name: Sonarqube scan
         uses: SonarSource/sonarqube-scan-action@v6.0.0
