@@ -22,7 +22,7 @@ jobs:
     test:
       needs: build
       runs-on: [self-hosted ,Linux]
-      if: ${{ needs.build.result == 'Build Successful' }}
+      if: ${{ needs.build.result == 'success' }}
       
 
       steps:
@@ -36,7 +36,7 @@ jobs:
     start:
       needs: test
       runs-on: [self-hosted ,Linux]
-      if: ${{ needs.test.result == 'passed' }}
+      if: ${{ needs.test.result == 'success' }}
 
       steps:
         - name: checkout code
