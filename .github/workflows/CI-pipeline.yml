@@ -20,17 +20,16 @@ jobs:
 
 
     build:
+      needs: test
       runs-on: [self-hosted ,Linux]
-      if: 
+      if: ${{ needs.test.result == 'passed' }}
 
       steps:
         - name: checkout code
           uses: actions/checkout@v6
 
-        - name: node modules install and test 
-          run: |
-            npm i
-            npm start
+        - name: build app.js 
+          run: npm build
       
         
       
